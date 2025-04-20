@@ -159,7 +159,13 @@ finaldata <- finaldata %>% mutate(
 ) %>% filter(geoPoint.lon < 0)
 
 names(finaldata) <- toupper(names(finaldata))
-saveRDS(finaldata,file="trials")
+#saveRDS(finaldata,file="trials")
+
+
+
+library(pins)
+board <- board_connect(auth = "envvar")
+board %>% pin_write(finaldata,"ClinicalTrialsData")
 
 head(finaldata)
 
