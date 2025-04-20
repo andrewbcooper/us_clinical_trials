@@ -8,7 +8,7 @@ output: html_document
 
 ```{r}
 
-install.packages("pins")
+
 library(httr)
 library(jsonlite)
 library(dplyr)
