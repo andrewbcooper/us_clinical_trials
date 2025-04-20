@@ -165,7 +165,7 @@ names(finaldata) <- toupper(names(finaldata))
 
 
 
-board <- board_connect(auth = "envvar")
+board <- board_connect(auth = "rsconnect")
 board %>% pin_write(finaldata,"ClinicalTrialsData")
 
 head(finaldata)
