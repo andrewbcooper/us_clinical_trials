@@ -8,13 +8,14 @@ output: html_document
 
 ```{r}
 
-
+install.packages("pins")
 library(httr)
 library(jsonlite)
 library(dplyr)
 library(readr)
 library(stringr)
 library(purrr)
+library(pins)
 
 data <- list()
 
@@ -163,7 +164,7 @@ names(finaldata) <- toupper(names(finaldata))
 
 
 
-library(pins)
+
 board <- board_connect(auth = "envvar")
 board %>% pin_write(finaldata,"ClinicalTrialsData")
 
