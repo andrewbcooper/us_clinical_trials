@@ -20,7 +20,7 @@ jobs:
       - run: |
           date > generated.txt
           git config user.name andrewbcooper
-          git config user.email andrewbcooper@github.com
+          git config user.email andrew.cooper@seattlechildrens.org
           git add .
           git commit -m "generated"
           git push
