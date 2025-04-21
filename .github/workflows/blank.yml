@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule: # minute hour
-    - cron: '45 * * * *'
+    - cron: '55 * * * *'
 permissions:
   contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,7 +21,7 @@ jobs:
           date > generated.txt
           git config --local user.name andrewbcooper
           git config --local user.email andrew.cooper@seattlechildrens.org
-          git add .
+          git add generated.txt
           git commit -m "generated"
           git push
 
