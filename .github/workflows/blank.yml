@@ -18,7 +18,7 @@ jobs:
     steps: 
       - uses: actions/checkout@v4
       - run: |
-          date > generated.txt
+          time > generated.txt
           git config --local user.name andrewbcooper
           git config --local user.email andrew.cooper@seattlechildrens.org
           git add generated.txt
