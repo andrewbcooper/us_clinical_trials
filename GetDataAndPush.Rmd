@@ -17,6 +17,8 @@ library(stringr)
 library(purrr)
 library(pins)
 
+timedatestamp <- read_file("generated.txt")
+
 data <- list()
 
 silly <- GET("https://clinicaltrials.gov/api/v2/studies",query=list(pageSize=10000,
@@ -168,8 +170,10 @@ saveRDS(finaldata,file="trials")
 #board <- board_connect(auth = "rsconnect")
 #board %>% pin_write(finaldata,"ClinicalTrialsData")
 
+print(timedatestamp)
 head(finaldata)
 
+#rsconnect::writeManifest()
 
 #token <- Sys.getenv('token',unset = NA)
 #secret <- Sys.getenv('secret',unset = NA)
