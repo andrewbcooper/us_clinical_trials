@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.MY_TOKEN }}
       - name: Create report file
         run: date +%s > report.txt
       - name: Commit report
