@@ -22,8 +22,7 @@ jobs:
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add generated.txt
-          git add GetDataAndPush.Rmd
           git commit -m "generated"
-          git push --force
+          git push 
 
       
