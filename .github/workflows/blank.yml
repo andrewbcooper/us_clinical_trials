@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule: # minute hour
-    - cron: '18 05 * * *'
+    - cron: '25 05 * * *'
 permissions:
   contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,8 +21,8 @@ jobs:
           token: ${{ secrets.MY_TOKEN }}
       - run: |
           date > generated.txt
-          git config --global user.email 'andrewbcooper
-          git config --global user.name 'andrew.cooper@seattlechildrens.org'
+          git config --global user.email 'andrew.cooper@seattlechildrens.org
+          git config --global user.name 'andrewbcooper'
           git add generated.txt
           git commit -am "generated"
           git push 
