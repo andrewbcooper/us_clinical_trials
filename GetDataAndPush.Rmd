@@ -11,6 +11,7 @@ output: html_document
 #Adding silly text
 # Adding more silly text
 # And less silly
+# set up environament
 
 library(readr)
 
