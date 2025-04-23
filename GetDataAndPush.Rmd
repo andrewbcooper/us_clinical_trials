@@ -10,7 +10,7 @@ output: html_document
 
 #Adding silly text
 # Adding more silly text
-# And more
+# And less silly
 
 library(readr)
 
