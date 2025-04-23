@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   schedule: # minute hour
-    - cron: '35 5 * * *'
+    - cron: '45 23 * * *'
 permissions:
   contents: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
