@@ -1,15 +1,12 @@
 library(shiny)
 
-dammit <- rep(Sys.time(),100)
-saveRDS(dammit,'mysillyfile')
-
 ui <- fluidPage(
   "Hello, world!",
   verbatimTextOutput("silly")
 )
 server <- function(input, output, session) {
   output$silly <- renderPrint({
-    head(readRDS('mysillyfile'))
+    head(readRDS('trials.RDS'))
   })
 }
 shinyApp(ui, server)
