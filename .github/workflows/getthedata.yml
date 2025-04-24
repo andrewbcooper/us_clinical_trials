@@ -33,7 +33,7 @@ jobs:
 
       - name: Commit results
         run: |
-          git config --global user.email "andrew.cooper@seattlechildrens.org"
+          git config --global user.email "andrew_b_cooper@yahoo.com"
           git config --global user.name "andrewbcooper"
           git add trials.RDS
           git commit -m 'Data updated' || echo "No changes to commit"
