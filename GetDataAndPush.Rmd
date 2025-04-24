@@ -19,7 +19,7 @@ timedatestamp <- Sys.time()
 
 print(timedatestamp)
 
-saveRDS(timedatestamp,'mysillyfile')
+#saveRDS(timedatestamp,'mysillyfile')
 
 #rsconnect::writeManifest()
 
