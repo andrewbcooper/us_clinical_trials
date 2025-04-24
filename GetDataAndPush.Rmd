@@ -24,7 +24,7 @@ saveRDS(timedatestamp,'mysillyfile')
 silly3 <- readRDS('mysillyfile')
 print(silly3)
 
-print("really?")
+print("really? really? really?")
 #rsconnect::writeManifest()
 
 
