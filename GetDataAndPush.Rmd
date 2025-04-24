@@ -21,6 +21,9 @@ print(timedatestamp)
 
 saveRDS(timedatestamp,'mysillyfile')
 
+silly3 <- readRDS('mysillyfile')
+print(silly3)
+
 #rsconnect::writeManifest()
 
 
