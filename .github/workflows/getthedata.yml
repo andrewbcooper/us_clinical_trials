@@ -35,7 +35,7 @@ jobs:
         env:
           MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
         run: |
-          MAPBOX_API_KEY = Sys.getenv("MAPBOX_API_KEY")
+          MAPBOX_API_KEY = Sys.getenv('MAPBOX_API_KEY')
           Rscript -e 'source("getdata.R")'
 
       - name: Commit results
