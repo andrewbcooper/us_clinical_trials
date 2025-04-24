@@ -149,10 +149,4 @@ finaldata <- finaldata %>% mutate(
 ) %>% filter(geoPoint.lon < 0)
 
 names(finaldata) <- toupper(names(finaldata))
-#saveRDS(finaldata,file="trials")
-
-#timedatestamp <- Sys.time()
-
-#print(timedatestamp)
-
-saveRDS(finaldata,'trials')
+saveRDS(finaldata,file="trials.RDS")
