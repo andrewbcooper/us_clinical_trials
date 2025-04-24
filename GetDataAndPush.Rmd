@@ -15,7 +15,7 @@ output: html_document
 
 library(readr)
 
-timedatestamp <- "silly2"
+timedatestamp <- Sys.time()
 
 print(timedatestamp)
 
