@@ -1,6 +1,8 @@
 on:
-  push:
-    branches: main
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  schedule: # minute hour
+    - cron: '25 2 * * *'
+    - cron: '25 3 * * *'
 permissions:
   contents: write
 jobs:
