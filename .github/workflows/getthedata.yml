@@ -25,6 +25,7 @@ jobs:
             any::stringr
             any::purrr
             any::tidygeocoder
+            any::usethis
             
       - name: Check out repository
         uses: actions/checkout@v3
