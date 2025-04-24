@@ -5,6 +5,9 @@ library(readr)
 library(stringr)
 library(purrr)
 library(tidygeocoder)
+library(usethis)
+
+edit_r_environ(MAPBOX_API_KEY=MAPBOX_API_KEY)
 
 data <- list()
 
