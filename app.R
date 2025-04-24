@@ -1,4 +1,8 @@
 library(shiny)
+
+timedatestamp <- Sys.time()
+saveRDS(timedatestamp,'mysillyfile')
+
 ui <- fluidPage(
   "Hello, world!",
   verbatimTextOutput("silly")
