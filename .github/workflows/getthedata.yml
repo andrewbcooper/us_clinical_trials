@@ -14,7 +14,6 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           packages: |
-            any::tidyverse
             any::httr 
             any::jsonlite
             any::dplyr
@@ -29,8 +28,8 @@ jobs:
 
       - name: Commit results
         run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
+          git config --global user.email "andrew.cooper@seattlechildrens.org"
+          git config --global user.name "andrewbcooper"
           git add trials.RDS
           git commit -m 'Data updated' || echo "No changes to commit"
           git push origin || echo "No changes to commit"
