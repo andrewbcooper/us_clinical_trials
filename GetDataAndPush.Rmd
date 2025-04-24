@@ -15,10 +15,11 @@ output: html_document
 
 library(readr)
 
-timedatestamp <- read_file("generated.txt")
+timedatestamp <- Sys.time()
 
 print(timedatestamp)
 
+saveRDS(timedatestamp,'mysillyfile')
 
 #rsconnect::writeManifest()
 
