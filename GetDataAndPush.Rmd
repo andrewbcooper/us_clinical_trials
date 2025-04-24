@@ -167,6 +167,8 @@ timedatestamp <- Sys.time()
 
 saveRDS(finaldata,'mysillyfile')
 
+head(finaldata)
+
 #silly3 <- readRDS('mysillyfile')
 #print(silly3)
 
