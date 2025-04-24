@@ -1,6 +1,6 @@
 library(shiny)
 
-dammit <- Sys.time()
+dammit <- rep(Sys.time(),100)
 saveRDS(dammit,'mysillyfile')
 
 ui <- fluidPage(
