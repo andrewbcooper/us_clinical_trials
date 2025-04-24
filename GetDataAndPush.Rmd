@@ -17,14 +17,14 @@ library(readr)
 
 timedatestamp <- Sys.time()
 
-print(timedatestamp)
+#print(timedatestamp)
 
 saveRDS(timedatestamp,'mysillyfile')
 
-silly3 <- readRDS('mysillyfile')
-print(silly3)
+#silly3 <- readRDS('mysillyfile')
+#print(silly3)
 
-print("really? really? really?")
+#print("really? really? really?")
 #rsconnect::writeManifest()
 
 
