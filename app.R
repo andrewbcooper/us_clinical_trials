@@ -9,7 +9,7 @@ ui <- fluidPage(
 )
 server <- function(input, output, session) {
   output$silly <- renderPrint({
-    readRDS('mysillyfile')
+    head(readRDS('mysillyfile'))
   })
 }
 shinyApp(ui, server)
