@@ -1,4 +1,4 @@
-
+library(tidyverse)
 library(httr)
 library(jsonlite)
 library(dplyr)
@@ -149,4 +149,6 @@ finaldata <- finaldata %>% mutate(
 ) %>% filter(geoPoint.lon < 0)
 
 names(finaldata) <- toupper(names(finaldata))
-saveRDS(finaldata,file="trials.RDS")
+finaldata %>%
+  write_rds("trials.RDS")
+#saveRDS(finaldata,file="trials.RDS")
