@@ -12,8 +12,7 @@ jobs:
     steps:
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
-        with:
-          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+        
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
@@ -33,7 +32,11 @@ jobs:
           token: ${{ secrets.MY_TOKEN }}
 
       - name: Import data
-        run: Rscript -e 'source("getdata.R")'
+        env:
+          MAPBOX_API_KEY: ${{ secrets.MAPBOX_API_KEY }}
+        run: |
+          mapbox_api_key = Sys.getenv("MAPBOX_API_KEY")
+          Rscript -e 'source("getdata.R")'
 
       - name: Commit results
         run: |
