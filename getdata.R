@@ -105,23 +105,23 @@ finaldata <- do.call(rbind,data_part2) %>% filter(country == "United States")
 finaldata$phase = as.vector(do.call(rbind,finaldata$phase))
 finaldata$state <- ifelse(finaldata$state == "Washington" & is.na(finaldata$zip) == FALSE & as.numeric(substr(finaldata$zip, start = 1, stop = 5)) < 30000, "District of Columbia",finaldata$state)
 
-library(tidygeocoder)
+#library(tidygeocoder)
 
-mysilly <- finaldata %>% filter(is.na(geoPoint.lat)==TRUE)
+#mysilly <- finaldata %>% filter(is.na(geoPoint.lat)==TRUE)
 
-sillygeo = tryCatch(geo(address = unique(mysilly$zip),method="mapbox"),error=function(e) {
-  Sys.sleep(3)
-  geo(address = unique(mysilly$zip),method="mapbox")
-})
+#sillygeo = tryCatch(geo(address = unique(mysilly$zip),method="mapbox"),error=function(e) {
+#  Sys.sleep(3)
+#  geo(address = unique(mysilly$zip),method="mapbox")
+#})
 
 
-mysilly <- left_join(mysilly,sillygeo,by=c("zip"="address"))
-mysilly <- mysilly %>% 
-  mutate(geoPoint.lat = lat,
-         geoPoint.lon = long) %>%
-  select(-c("lat","long"))
+#mysilly <- left_join(mysilly,sillygeo,by=c("zip"="address"))
+#mysilly <- mysilly %>% 
+ # mutate(geoPoint.lat = lat,
+ #        geoPoint.lon = long) %>%
+ # select(-c("lat","long"))
 
-finaldata = rbind(finaldata[is.na(finaldata$geoPoint.lat) == FALSE,],mysilly) 
+#finaldata = rbind(finaldata[is.na(finaldata$geoPoint.lat) == FALSE,],mysilly) 
 
 finaldata <- finaldata %>% mutate(
   
