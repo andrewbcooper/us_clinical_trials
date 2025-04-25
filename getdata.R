@@ -7,7 +7,7 @@ library(purrr)
 library(tidygeocoder)
 library(usethis)
 
-Sys.setenv(MAPBOX_API_KEY=MAPBOX_API_KEY)
+#Sys.setenv(MAPBOX_API_KEY=MAPBOX_API_KEY)
 
 data <- list()
 
