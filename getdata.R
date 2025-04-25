@@ -9,6 +9,8 @@ library(usethis)
 
 #Sys.setenv(MAPBOX_API_KEY=MAPBOX_API_KEY)
 
+print(Sys.getevn(MAPBOX_API_KEY))
+
 data <- list()
 
 silly <- GET("https://clinicaltrials.gov/api/v2/studies",query=list(pageSize=10000,
